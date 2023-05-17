@@ -104,6 +104,7 @@ onMounted(async () => {
 
 function filterUserIds() {
     filteredUserId.value = [...new Set(todosBackup.value.map(obj => obj.userId))];
+    filteredUserId.value.sort((a, b) => a - b);
 }
 
 function toggleTodo(id) {
