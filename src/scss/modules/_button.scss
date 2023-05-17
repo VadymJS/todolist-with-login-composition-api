@@ -1,0 +1,63 @@
+.btn {
+    display: inline-block;
+    line-height: 20px;
+    vertical-align: middle;
+    padding: 10px;
+    cursor: pointer;
+    transition: .3s $ease-out;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+    color: $color-white;
+    background-color: $color-info;
+    font-family: $font-base;
+    font-size: 14px;
+    user-select: none;
+    border: none;
+    border: 1px solid rgba($color-grey, .2);
+    border-radius: 5px;
+
+    .svg-icon {
+        transition: .3s $ease-out;
+    }
+
+    &-info {
+        background-color: $color-info;
+
+        &:hover {
+            background-color: lighten($color-info, 3%);
+        }
+    }
+
+    &-success {
+        background-color: $color-success;
+
+        &:hover {
+            background-color: lighten($color-success, 3%);
+        }
+    }
+
+    &-icon {
+        padding-left: 7px;
+        padding-right: 7px;
+        display: flex;
+
+        &:hover .svg-icon {
+            transform: scale(1.1);
+        }
+    }
+
+    &-link {
+        background-color: unset;
+        border: none;
+    }
+
+    &-bordered {
+        background-color: unset;
+        border: 1px solid $color-grey;
+
+        &:hover {
+            border-color: rgba($color-black, .5);
+        }
+    }
+}

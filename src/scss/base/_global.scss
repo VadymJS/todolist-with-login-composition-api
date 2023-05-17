@@ -1,0 +1,80 @@
+// Global Styles
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#app {
+    height: 100%;
+}
+
+body {
+    color: $color-grey-dark-half;
+    background-color: $color-secondary;
+    font-family: $font-base;
+    font-size: 15px;
+    min-width: 300px;
+    line-height: 21px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    user-select: none;
+    pointer-events: none;
+}
+
+a, .link {
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+    transition: all .3s $ease-out;
+
+    &:active,
+    &:focus,
+    &:hover {
+        outline: 0;
+    }
+}
+
+// Global Headings
+.head {
+    &-md {
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+    &-sm {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+// Global Wrapper
+.wrapper {
+    max-width: 1324px;
+    padding: 0 16px;
+    margin: 0 auto;
+    width: 100%;
+
+    @include media(md) {
+        padding: 0 32px;
+    }
+}
+
+.svg-icon {
+    width: 20px;
+    height: 20px;
+
+    &.fill-error {
+        fill: $color-error;
+    }
+}

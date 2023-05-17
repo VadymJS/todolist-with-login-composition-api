@@ -1,0 +1,45 @@
+.card {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+
+    &-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $color-grey-light-half;
+        padding: 15px;
+        border-radius: 5px 5px 0 0;
+
+        &-info {
+            display: flex;
+            align-items: center;
+
+            .badge {
+                margin-right: 8px;
+            }
+        }
+    }
+
+    &-body {
+        display: flex;
+        flex-direction: column;
+        background: $color-grey-light;
+        padding: 15px;
+        border-radius: 0 0 5px 5px;
+
+        @include media(md) {
+            padding: 15px 25px 30px;
+        }
+
+        .form-group {
+            margin-top: 20px;
+        }
+
+        .btn {
+            margin-top: 25px;
+        }
+    }
+}

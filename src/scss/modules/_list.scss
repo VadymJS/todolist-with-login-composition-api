@@ -1,0 +1,46 @@
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $color-white;
+    padding: 10px 20px;
+    border-radius: 5px;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    &-body {
+
+        &-title {
+            margin-bottom: 5px;
+
+            &-id {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &-actions {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+
+        .btn:first-child {
+            margin-right: 10px;
+        }
+    }
+
+    &-filter {
+        margin-bottom: 20px;
+        display: flex;
+    }
+
+    &-nodata {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 200px;
+    }
+}
+

@@ -1,0 +1,16 @@
+// Adaptive: Add media
+// Example: @include media(md) {}
+@mixin media($name, $value: '') {
+    @if $name == xs {
+        @content;
+    } @else {
+        @media (min-width: map-get($media, $name)) { @content; }
+    }
+}
+
+// Adaptive: Add '-' if value not equal to 0
+@function breakpoint($name) {
+    $breakpoint: map-get($media, $name);
+    $result: if($breakpoint == 0, '', "-#{$name}");
+    @return $result;
+}

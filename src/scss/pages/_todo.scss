@@ -1,0 +1,82 @@
+.todo-list {
+    margin-top: 20px;
+    color: $color-white;
+    height: 100%;
+
+    .head-sm {
+        margin-bottom: 20px;
+    }
+
+    .user-info:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    &-body {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include media(md) {
+            flex-direction: row;
+            margin: 20px 0 0;
+            flex-wrap: wrap;
+        }
+
+        @include media(lg) {
+            flex-wrap: unset;
+        }
+
+        &.is-loading {
+            opacity: 0.5;
+            pointer-events: none;
+            filter: blur(2px);
+        }
+
+        &-user, &-add {
+            @include media(md) {
+                width: 25%;
+            }
+        }
+
+        &-list {
+            margin: 40px 0;
+
+            @include media(md) {
+                order: 1;
+                width: 100%;
+            }
+
+            @include media(lg) {
+                order: unset;
+                width: 50%;
+                margin: 0 40px;
+            }
+
+            &-background {
+                padding: 15px;
+                border-radius: 10px;
+                background: $color-primary;
+
+                .list-group {
+                    max-height: 500px;
+                    overflow-y: auto;
+                }
+            }
+        }
+
+        &-add {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+
+            @include media(md) {
+                margin: 0;
+            }
+
+            .form-group {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

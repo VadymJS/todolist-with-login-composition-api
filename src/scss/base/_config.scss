@@ -1,0 +1,25 @@
+// Colors
+$color-primary: #85929E;
+$color-secondary: #34495E;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-grey-light: #C3C3C3;
+$color-grey-light-half: #A5A5A5;
+$color-grey: #545454;
+$color-grey-dark-half: #5F5F5F;
+$color-grey-dark: #474747;
+$color-info: #418AF2;
+$color-success: #519945;
+$color-error: #E61610;
+
+
+// Fonts
+$font-base: 'Robobo', sans-serif;
+
+
+// Easing
+$ease-out: cubic-bezier(.36, .52, .23, .93);
+
+
+// Breakpoints
+$media: (xs: 0, md: 768px, lg: 1024px, xl: 1200px, xxl: 1400px) !default;
